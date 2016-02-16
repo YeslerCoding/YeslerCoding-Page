@@ -1,1 +1,27 @@
 /* Add main styles here */
+
+body {
+    background-color:pink;
+    height:100%;
+    width:100%;
+}
+
+
+.container {
+    background-color: beige;
+    width: 100%;
+}
+
+.hero-unit {
+    background-color: aqua; 
+    height: 60rem;
+}
+
+.hero-text {
+    width:60%;
+    height:30rem;
+    background-color:red;
+    margin:0 auto;
+    margin-top: 10rem;
+    text-align: center;
+}
