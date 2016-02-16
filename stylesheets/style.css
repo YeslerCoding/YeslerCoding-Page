@@ -1,1 +1,292 @@
-/* Add main styles here */
+/*Design Reference:
+Dark grey: #222
+Medium grey: #595959
+Teal: #498e98
+Orange: #fd7f32*/
+
+/** CSS reset **/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+.clearfix:before, .clearfix:after
+{
+    content: '\0020';
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
+.clearfix:after
+{
+    clear: both;
+}
+
+/* IE6 & 7 */
+.clearfix
+{
+    zoom: 1;
+}
+
+/*Typography*/ 
+@font-face {
+    font-family:'BebasNeue';
+    src: url('../fonts/BebasNeueReg.ttf') format('truetype'), 
+    	url('../fonts/BebasNeue.eot'),
+    	url('../fonts/BebasNeue.eot?#iefix') format('embedded-opentype'),
+    	url('../fonts/BebasNeueReg.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-2248;
+}
+
+@font-face {
+    font-family:'BebasNeue';
+    src: url('../fonts/BebasNeueLight.ttf') format('truetype'), 
+    	url('../fonts/BebasNeue.eot'),
+    	url('../fonts/BebasNeue.eot?#iefix') format('embedded-opentype'),
+    	url('../fonts/BebasNeueLight.otf') format('opentype');
+    font-weight: 200;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-2248;
+}
+
+@font-face {
+    font-family:'BebasNeue';
+    src: url('../fonts/BebasNeueBook.ttf') format('truetype'),
+    	url('../fonts/BebasNeue.eot'),
+    	url('../fonts/BebasNeue.eot?#iefix') format('embedded-opentype'),
+    	url('../fonts/BebasNeueBook.otf') format('opentype');
+    font-weight: 700;
+    font-style: bold;
+    font-stretch: normal;
+    unicode-range: U+0020-2248;
+}
+
+@font-face {
+    font-family:'BebasNeue';
+    src: url('../fonts/BebasNeueBold.ttf') format('truetype'),
+    	url('../fonts/BebasNeueBold.eot'),
+    	url('../fonts/BebasNeueBold.eot?#iefix') format('embedded-opentype'),
+    	url('../fonts/BebasNeueBold.otf') format('opentype');
+    font-weight: 900;
+    font-style: bold;
+    font-stretch: normal;
+    unicode-range: U+0020-2248;
+}
+
+@font-face {
+    font-family:'ProximaNova';
+    src: url('../fonts/ProximaNovaReg.ttf') format('truetype'),
+    	url('../fonts/ProximaNovaReg.eot'),
+    	url('../fonts/ProximaNovaReg.eot?#iefix') format('embedded-opentype'),
+    	url('../fonts/ProximaNovaReg.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-2666;
+}
+
+@font-face {
+    font-family:'ProximaNova';
+    src: url('../fonts/ProximaNovaLight.ttf') format('truetype'), 
+    	url('../fonts/ProximaNovaLight.eot'),
+    	url('../fonts/ProximaNovaLight.eot?#iefix') format('embedded-opentype'),
+    	url('../fonts/ProximaNovaLight.otf') format('opentype');
+    font-weight: 200;
+    font-style: bold;
+    font-stretch: normal;
+    unicode-range: U+0020-2666;
+}
+
+/** Page styles begin **/
+html {
+	box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    color:#595959;
+    font-family: ProximaNova,Helvetica,Arial,sans-serif;
+	text-rendering: optimizeLegibility; 
+}
+
+p, li, ul {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+hr {
+	background-color: #ccc;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+
+a,
+a:hover,
+a:focus,
+a:active,
+a.active {
+    outline: 0;
+    color: #498E98;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: BebasNeue,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+h1{
+    font-size: 80px;
+    font-weight:900;
+}
+
+h2{
+    font-size: 64px;
+    font-weight:900;
+}
+
+h3{
+    font-size: 48px;
+    font-weight:900;
+}
+
+h4{
+    font-size: 36px;
+    font-weight:700;
+}
+
+h5{
+    font-size: 32px;
+}
+
+.bg-dark-grey {
+    background-color: #222;
+}
+
+.bg-med-grey {
+	background-color: #595959;
+}
+
+.bg-orange {
+    background-color: #fd7f32;
+}
+
+.bg-teal {
+    background-color: #498E98;
+}
+
+.text-muted {
+    color: #777;
+}
+
+.text-primary {
+    color: #498E98;
+}
+
+.white{
+    color:#ffffff;
+}
+
+.emphasis {
+	font-weight: 700;
+}
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	font-family: "ProximaNova","Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 18px;
+    font-weight: 400;
+	border: 1px solid;
+	padding: 8px 20px;
+	border-radius: 3px;
+}
+
+.btn-primary {
+    border-color: #498E98;
+    color: #498E98;
+    background-color: transparent;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary {
+    border-color: #498E98;
+    color: #fff;
+    background-color: #498E98;
+}
+
+.btn-white{
+    border-color: #ffffff;
+    color: #fff;
+    background-color: transparent;
+}
+
+.btn-white:hover,
+.btn-white:focus,
+.btn-white:active,
+.btn-white.active,
+.open .dropdown-toggle.btn-white {
+    border-color: #ffffff;
+    color: #595959;
+    background-color: #ffffff;
+}
+
+.margin-3520 {
+    margin: 35px 20px;
+}
+
+.padding-3520 {
+    padding: 35px 20px;
+}
