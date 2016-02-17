@@ -1,3 +1,1 @@
-# Twitter Bootstrap for Compass
-
-This is Twitter Bootstrap for compass
+Put YeslerCoding site workflow instructions here.
